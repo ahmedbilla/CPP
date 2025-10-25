@@ -20,14 +20,12 @@ int main(int ac, char *av[])
     int     j;
 
     i = 0;
-    j = 0;
+    j = 1;
     if(ac == 1)
     {
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
         return 1;
     }
-    else if(ac > 2)
-    {
         while(av[j])
         {
             i = 0;
@@ -40,5 +38,4 @@ int main(int ac, char *av[])
             j++;
         }   
         std::cout << std::endl;     
-    }
 }

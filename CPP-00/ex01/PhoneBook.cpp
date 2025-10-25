@@ -33,11 +33,11 @@ void PhoneBook::search_contact(std::string index, int id)
     if (index.length() == 1)
     {
         int i = atoi(index.c_str());
-        if(i <= id)
-            print_headr();
+        // if(i <= id)
+        //     print_headr();
         
         if ((i >= 0 && i <= id))
-            arr[i].display_contact();
+            arr[i].display_index();
         else
             std::cout << "Error: Invalid index value.\n";
     }

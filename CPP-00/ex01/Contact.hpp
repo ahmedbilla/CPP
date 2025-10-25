@@ -29,6 +29,7 @@ class Contact
     public:
         void set_name(int index, std::string fn, std::string ln, std::string nn, std::string pn, std::string ds);
         void display_contact();
+        void display_index();
 };
 
 

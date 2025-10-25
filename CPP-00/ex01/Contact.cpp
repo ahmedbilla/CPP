@@ -32,3 +32,12 @@ void Contact::display_contact()
               << std::setw(10) << check_len(last_name) << "|"
               << std::setw(10) << check_len(nickname) << std::endl;
 }
+
+void Contact::display_index()
+{
+    std::cout << "First Name : " << first_name << std::endl;
+    std::cout << "Last Name : " << last_name << std::endl;
+    std::cout << "Nickname : " << nickname << std::endl;
+    std::cout << "Phone Number : " << phone_number << std::endl;
+    std::cout << "Darkset Secret : " << Darkest_secret << std::endl;
+}
