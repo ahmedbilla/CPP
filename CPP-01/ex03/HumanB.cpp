@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 18:10:32 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/10/28 21:22:09 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/10/28 22:41:07 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/10/29 17:50:58 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.h"
 
-int main()
+HumanB::HumanB(std::string str)
 {
-    int N = 1;
-    int i = 0;
-    Zombie *obj =  zombieHorde(N, "AHMED");
-    while (i < N)
+    Weapo = NULL;
+    name = str;
+}
+
+void HumanB::attack()
+{
+    if(Weapo)
+        std::cout << name << " attacks with their " << Weapo->getType() << std::endl;
+    else
     {
-        obj[i].announce();
-        i++;
+        std::cout << "dont have a Weapon" << std::endl;
     }
-    delete[] obj;
+} 
+void HumanB::setWeapon(Weapon &wp)
+{
+    Weapo = &wp;
+}
+HumanB::~HumanB()
+{
 }

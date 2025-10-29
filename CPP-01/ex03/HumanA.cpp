@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 18:10:32 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/10/28 21:22:09 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/10/29 17:28:56 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/10/29 17:51:22 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.h"
 
-int main()
+HumanA::HumanA(std::string str, Weapon &club) : Weapo(club)
 {
-    int N = 1;
-    int i = 0;
-    Zombie *obj =  zombieHorde(N, "AHMED");
-    while (i < N)
-    {
-        obj[i].announce();
-        i++;
-    }
-    delete[] obj;
+    name = str;  
+}
+
+void HumanA::attack()
+{
+    std::cout << name << " attacks with their " << Weapo.getType() << std::endl;
+} 
+HumanA::~HumanA()
+{   
 }

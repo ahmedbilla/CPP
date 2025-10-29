@@ -5,26 +5,26 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/21 15:12:40 by ahbilla           #+#    #+#              #
-#    Updated: 2025/10/28 13:56:36 by ahbilla          ###   ########.fr        #
+#    Created: 2025/10/28 21:58:56 by ahbilla           #+#    #+#              #
+#    Updated: 2025/10/28 22:11:09 by ahbilla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = Contact.cpp  HelperFunction.cpp  main.cpp  PhoneBook.cpp
+SRCS = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
-NAME = phonebook
+NAME = Weapon
 CPP = c++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPCFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: ${NAME}
 
-%.o: %.cpp Contact.hpp  GlobalHeader.hpp  PhoneBook.hpp
-	${CPP} ${CPPFLAGS} -c $< -o $@
+%.o: %.cpp HumanA.hpp HumanB.hpp Weapon.hpp Weapon.h
+	${CPP} ${CPPCFLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS}
-	${CPP} ${CPPFLAGS} ${OBJS} -o ${NAME}
+	${CPP} ${CPPCFLAGS} ${OBJS} -o ${NAME}
 
 clean:
 	${RM} ${OBJS}

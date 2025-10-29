@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/28 18:11:13 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/10/28 21:23:50 by ahbilla          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
 
@@ -9,22 +21,10 @@ private:
     std::string name;
 
 public:
-    Zombie()
-    {
-        std::cout << "Default Constructor is called " << name << std::endl;
-    }
-    Zombie(std::string name) : name(name)
-    {
-        std::cout << "Constructor is called " << name << std::endl;
-    }
-    void announce()
-    {
-        std::cout << name << " : BraiiiiiiinnnzzzZ..." << std::endl;
-    }
-    ~Zombie()
-    {
-        std::cout << "Destructor is called " << name << std::endl;
-    }
+    Zombie();
+    Zombie(std::string name);
+    void announce();
+    ~Zombie();
 };
 Zombie* zombieHorde( int N, std::string name );
 #endif

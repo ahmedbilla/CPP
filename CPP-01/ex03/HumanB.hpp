@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 18:10:32 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/10/28 21:22:09 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/10/28 22:52:09 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/10/29 17:47:59 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
 
-int main()
+#include "Weapon.h"
+
+class HumanB
 {
-    int N = 1;
-    int i = 0;
-    Zombie *obj =  zombieHorde(N, "AHMED");
-    while (i < N)
-    {
-        obj[i].announce();
-        i++;
-    }
-    delete[] obj;
-}
+private:
+    std::string name;
+    Weapon *Weapo;
+
+public:
+    HumanB(std::string str);
+    void attack();
+    void setWeapon(Weapon &wp);
+    ~HumanB();
+};
+
+#endif

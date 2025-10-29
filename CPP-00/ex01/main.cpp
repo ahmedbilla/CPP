@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 15:12:38 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/10/22 15:36:38 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/10/28 13:52:32 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void check_empty_and_space(std::string &param, std::string out)
 {
     while ((param).empty() || is_just_space(param) || check_printable(param))
     {
-        std::cout << "No empty/non-printable allowed\n";
+        std::cerr << "No empty/non-printable allowed\n";
         std::cout << out;
         std::getline(std::cin, param);
         check_eof();
@@ -74,7 +74,7 @@ int main()
             while (check_is_number(pn) || pn.empty() || is_just_space(pn) || check_printable(pn))
             {
 
-                std::cout << "Phone number must be digits and not empty" << std::endl;
+                std::cerr << "Phone number must be digits and not empty" << std::endl;
                 std::cout << "Phone number : ";
                 std::getline(std::cin, pn);
                 check_eof();
@@ -98,7 +98,7 @@ int main()
                 std::getline(std::cin, index);
                 while(check_is_number(index))
                 {
-                    std::cout << "Index must be numeric only." << std::endl;
+                    std::cerr << "Index must be numeric only." << std::endl;
                     std::cout << "Please select an index : ";
                     std::getline(std::cin, index);
                     check_eof();
@@ -107,11 +107,11 @@ int main()
                 prv.search_contact(index, id);
             }
             else
-                std::cout << "Error: Phonebook is empty.\n";
+                std::cerr << "Error: Phonebook is empty.\n";
         }
         else if (chois == "EXIT")
             return 0;
         else
-            std::cout << "Command not found\n";
+            std::cerr << "Command not found\n";
     }
 }

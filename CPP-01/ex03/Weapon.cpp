@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 18:10:32 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/10/28 21:22:09 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/10/29 17:51:47 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/10/29 17:56:32 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.h"
 
-int main()
+Weapon::Weapon(std::string str)
 {
-    int N = 1;
-    int i = 0;
-    Zombie *obj =  zombieHorde(N, "AHMED");
-    while (i < N)
-    {
-        obj[i].announce();
-        i++;
-    }
-    delete[] obj;
+    type = str;
+}
+const std::string& Weapon::Weapon::getType()
+{
+    const std::string & retur_type = type;
+    return retur_type;
+}
+void Weapon::setType(std::string str)
+{
+    type = str;
+}
+Weapon::~Weapon()
+{
 }

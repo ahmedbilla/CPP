@@ -5,26 +5,26 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/21 15:12:40 by ahbilla           #+#    #+#              #
-#    Updated: 2025/10/28 13:56:36 by ahbilla          ###   ########.fr        #
+#    Created: 2025/10/28 21:43:09 by ahbilla           #+#    #+#              #
+#    Updated: 2025/10/28 21:43:10 by ahbilla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = Contact.cpp  HelperFunction.cpp  main.cpp  PhoneBook.cpp
+SRCS = main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
-NAME = phonebook
+NAME = brain
 CPP = c++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPCFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: ${NAME}
 
-%.o: %.cpp Contact.hpp  GlobalHeader.hpp  PhoneBook.hpp
-	${CPP} ${CPPFLAGS} -c $< -o $@
+%.o: %.cpp 
+	${CPP} ${CPPCFLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS}
-	${CPP} ${CPPFLAGS} ${OBJS} -o ${NAME}
+	${CPP} ${CPPCFLAGS} ${OBJS} -o ${NAME}
 
 clean:
 	${RM} ${OBJS}
