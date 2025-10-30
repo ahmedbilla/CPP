@@ -14,14 +14,12 @@
 #include <string>
 int ft_read_replace(std::string &line, Sed &obj)
 {
+    size_t res = 0;
     std::string NewFile = (obj.getValue("filename") += ".replace");
-    // std::string = line;
     std::ofstream file(NewFile.c_str());
-    std::string res;
-    // if (res = line.find("ahmed", res))
-    // {
-    //     std::cout << "kyna";
-    // }
+
+    res = line.find(obj.getValue("s1"), res);
+    std::cout <<res << "\n";
     
     file << line;
     std::string a= line;
