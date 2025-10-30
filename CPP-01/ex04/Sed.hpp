@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:45:08 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/10/30 11:27:32 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/10/30 14:08:09 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define SED_HPP
 
 #include <iostream>
-#include <ifstream>
+#include <fstream>
 
 class Sed
 {
@@ -33,6 +33,11 @@ class Sed
             s1 = str1;
             s2 = str2;
         }
+        std::string getValue()
+        {
+            return filename;
+        }
+        
 };
 
 #endif

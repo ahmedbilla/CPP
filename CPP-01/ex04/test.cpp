@@ -3,7 +3,7 @@
 #include <string>
 int main()
 {
-    std::ifstream file("test.txt");
+    std::ifstream file("tessst.txt");
     std::string line;
 
     if(file.is_open())
@@ -14,5 +14,6 @@ int main()
         }
         file.close();
     }
-    replace("test.txt", "Hello", "Hi");
+    else
+        std::cout << "Error: could not open file." << std::endl;
 }
