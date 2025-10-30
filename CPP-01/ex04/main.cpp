@@ -11,13 +11,21 @@
 /* ************************************************************************** */
 
 #include "Sed.hpp"
-
-void err_parsing()
+#include <string>
+int ft_read_replace(std::string &line, Sed &obj)
 {
-    std::cout << "\033[1;32m./Sed_is_for_losers\033[0m "
-    << "\033[1;34m<filename>\033[0m "
-    << "\033[1;33m\"S1\"\033[0m "
-    << "\033[1;31m\"S2\"\033[0m\n";
+    std::string NewFile = (obj.getValue("filename") += ".replace");
+    // std::string = line;
+    std::ofstream file(NewFile.c_str());
+    std::string res;
+    // if (res = line.find("ahmed", res))
+    // {
+    //     std::cout << "kyna";
+    // }
+    
+    file << line;
+    std::string a= line;
+    return 0;
 }
 int main(int ac, char *av[])
 {
@@ -31,8 +39,10 @@ int main(int ac, char *av[])
         if(file.is_open())
         {
             std::getline(file, line, '\0');
-            // ft_read_replace()
-    
+            // check getline is filed
+            ft_read_replace(line,obj);
+            // std:: string test= obj.getValue("filename");
+            // std::cout << test;
         }
         else
         {

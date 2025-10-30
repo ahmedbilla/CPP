@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <fstream>
+void err_parsing();
 
 class Sed
 {
@@ -33,9 +34,15 @@ class Sed
             s1 = str1;
             s2 = str2;
         }
-        std::string getValue()
+        std::string getValue(std::string type_return)
         {
-            return filename;
+            if (type_return == "filename")
+                return filename;
+            else if(type_return == "s1")
+                return s1;
+            else if (type_return == "s2")
+                return s2;
+            return ("Error\n");
         }
         
 };
