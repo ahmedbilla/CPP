@@ -24,27 +24,10 @@ class Sed
         std::string s1;
         std::string s2;
     public:
-        Sed()
-        {
-            std::cout << "\033[1;31mSed is for losers\033[0m\n";
-        }
-        void setValues(std::string file, std::string str1, std::string str2)
-        {
-            filename = file;
-            s1 = str1;
-            s2 = str2;
-        }
-        std::string getValue(std::string type_return)
-        {
-            if (type_return == "filename")
-                return filename;
-            else if(type_return == "s1")
-                return s1;
-            else if (type_return == "s2")
-                return s2;
-            return ("Error\n");
-        }
-        
+        Sed();
+        void setValues(std::string file, std::string str1, std::string str2);
+        std::string getValue(std::string type_return);
+        ~Sed();
 };
 
 #endif

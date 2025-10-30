@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp HelperFunction.cpp
+SRCS = main.cpp HelperFunction.cpp Sed.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 NAME = Sed
