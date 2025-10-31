@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/31 13:35:20 by ahbilla           #+#    #+#              #
-#    Updated: 2025/10/31 13:57:04 by ahbilla          ###   ########.fr        #
+#    Created: 2025/10/31 16:02:53 by ahbilla           #+#    #+#              #
+#    Updated: 2025/10/31 16:03:10 by ahbilla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = main.cpp Harl.cpp
 
 OBJS = ${SRCS:.cpp=.o}
-NAME = Harl
+NAME = harlFilter
 CPP = c++
 RM = rm -f
 CPPCFLAGS = -Wall -Wextra -Werror -std=c++98
