@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 17:43:40 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/02 23:45:04 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/03 11:41:46 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Fixed
 {
     private:
         int value;
-        static const int fractionalBits = 8;
+        static const int fractionalBits;
     public:
         Fixed();
         Fixed(const Fixed &other);

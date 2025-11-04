@@ -6,11 +6,13 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 23:30:48 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/02 23:42:09 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/03 11:41:38 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+const int Fixed::fractionalBits = 8;
 
 Fixed::Fixed() : value(0)
 {
