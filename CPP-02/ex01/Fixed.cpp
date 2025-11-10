@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:31:33 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/03 11:33:27 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/11 00:41:49 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,10 @@ void Fixed::setRawBits(int const raw)
 Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;
+}
+
+std::ostream &operator<<( std::ostream &file, const Fixed &op)
+{
+    file << op.toFloat();
+    return file;
 }
