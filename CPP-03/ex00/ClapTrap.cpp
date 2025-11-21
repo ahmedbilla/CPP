@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:34:03 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/15 10:07:43 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/21 23:17:59 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void ClapTrap::attack(const std::string &target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    if (amount > HitPoint)
+    if (amount > (unsigned int)HitPoint)
     {
         std::cerr << "Error: The amount is out of int range!\n";
         return;

@@ -6,21 +6,21 @@
 #    By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/14 17:40:04 by ahbilla           #+#    #+#              #
-#    Updated: 2025/11/14 17:41:26 by ahbilla          ###   ########.fr        #
+#    Updated: 2025/11/22 00:09:14 by ahbilla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp ClapTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJS = ${SRCS:.cpp=.o}
-NAME = ClapTrap
+NAME = ScavTrap
 CPP = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: ${NAME}
 
-%.o: %.cpp ClapTrap.hpp
+%.o: %.cpp ClapTrap.hpp ScavTrap.hpp
 	${CPP} ${CPPFLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS}

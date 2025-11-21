@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 16:14:57 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/15 10:07:49 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/22 00:08:01 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 
 #include <iostream>
 #include <limits>
+#include <climits>
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string Name;
-        unsigned int HitPoint;
+        int HitPoint;
         int EnergyPoint;
         int AttackDamage;
     public:
