@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:31:38 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/11 00:41:45 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/15 17:57:05 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,14 @@ class Fixed
 {
 private:
     int value;
-    static const int fractionalBits = 8;
+    static const int fractionalBits;
 
 public:
     Fixed();
-    Fixed(const int number) : value(number << fractionalBits)
-    {
-        std::cout <<"int constracteur caled \n";
-    }
-    Fixed(const float number) : value(roundf(number * (1 << fractionalBits)))
-    {
-         std::cout <<"float constracteur caled \n";
-    }
-    float toFloat(void) const
-    {
-        return (float)this->value / (1 << fractionalBits);
-    }
-    int toInt(void) const
-    {
-        return(this->value >> fractionalBits);
-    }
+    Fixed(const int number);
+    Fixed(const float number);
+    float toFloat(void) const;
+    int toInt(void) const;
     Fixed(const Fixed &other);
     Fixed &operator=(const Fixed &op);
     int getRawBits( void ) const;

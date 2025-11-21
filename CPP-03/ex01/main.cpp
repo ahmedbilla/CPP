@@ -5,29 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 10:27:10 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/15 22:34:41 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/11/14 17:18:14 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/11/15 10:02:44 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
 
-int main(void)
+
+int main()
 {
-    Fixed a;
-    Fixed x(10);
-    Fixed j(2);
-
-    Fixed const b(Fixed(5.05f) * Fixed(2));
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-
-    std::cout << "hdhshshdhsd:" << x/j << std::endl;
-
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << Fixed::max(a, b) << std::endl;
-    return 0;
+    ClapTrap obj("ahmed");
+    ClapTrap obj1(obj);
+    obj.attack("billa");
+    obj.takeDamage(5);
+    obj.beRepaired(5);
 }

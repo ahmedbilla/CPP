@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:31:38 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/13 22:07:14 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/14 15:56:01 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ public:
     Fixed operator*(const Fixed &op);
     Fixed operator++(void);
     Fixed operator++(int);
+    Fixed operator--(void);
+    Fixed operator--(int);
     Fixed operator+(const Fixed &op) const;
     Fixed operator-(const Fixed &op) const;
     Fixed operator/(const Fixed &op);

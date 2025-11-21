@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:31:33 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/13 22:07:18 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/15 22:34:47 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,20 @@ Fixed Fixed::operator++(int)
     Fixed tmp;
     tmp.value = this->value;
     this->value++;
+    return tmp.toFloat();
+}
+
+Fixed Fixed::operator--(void)
+{
+    this->value--;
+    return this->toFloat();
+}
+
+Fixed Fixed::operator--(int)
+{
+    Fixed tmp;
+    tmp.value = this->value;
+    this->value--;
     return tmp.toFloat();
 }
 
