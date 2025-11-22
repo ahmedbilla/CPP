@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:34:03 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/21 23:17:59 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/22 12:19:35 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ ClapTrap::ClapTrap() : HitPoint(10), EnergyPoint(10), AttackDamage(0)
 ClapTrap::ClapTrap(std::string param) : HitPoint(10), EnergyPoint(10), AttackDamage(0)
 {
     Name = param;
+    std::cout << "ClapTrap constructor paramtrise called\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
