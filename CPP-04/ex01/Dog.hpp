@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 17:18:14 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/23 15:05:35 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/11/26 16:53:55 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/11/26 23:21:32 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef DOG_HPP
+#define DOG_HPP
 
-
-int main()
+#include "Animal.hpp"
+#include "Brain.hpp"
+class Dog : public Animal
 {
-    ClapTrap obj("ahmed");
-    ClapTrap obj1(obj);
-    obj.attack("billa");
-    obj.takeDamage(5);
-    obj.beRepaired(5);
-}
+    private:
+        Brain *value;
+    public:
+        Dog();
+        Dog (const Dog &other);
+        Dog &operator=(const Dog &other);
+        void makeSound() const;
+        std::string getType() const;
+        ~Dog();
+};
+
+#endif

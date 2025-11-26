@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 17:18:14 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/23 15:05:35 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/11/26 23:06:06 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/11/26 23:17:37 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
+#include <iostream>
 
-int main()
+class Brain
 {
-    ClapTrap obj("ahmed");
-    ClapTrap obj1(obj);
-    obj.attack("billa");
-    obj.takeDamage(5);
-    obj.beRepaired(5);
-}
+    private:
+        std::string ideas[100];
+    public:
+        Brain();
+        ~Brain();
+};
+
+#endif

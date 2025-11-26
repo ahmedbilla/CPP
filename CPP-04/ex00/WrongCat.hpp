@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 17:18:14 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/23 15:05:35 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/11/26 22:11:38 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/11/26 22:49:56 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
+#include "WrongAnimal.hpp"
 
-int main()
+class WrongCat : public WrongAnimal
 {
-    ClapTrap obj("ahmed");
-    ClapTrap obj1(obj);
-    obj.attack("billa");
-    obj.takeDamage(5);
-    obj.beRepaired(5);
-}
+    public:
+        WrongCat();
+        WrongCat (const WrongCat &other);
+        WrongCat &operator=(const WrongCat &other);
+        void makeSound()  const;
+        std::string getType() const;
+        ~WrongCat();
+};
+
+#endif

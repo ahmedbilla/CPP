@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 17:18:14 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/23 15:05:35 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/11/26 16:11:22 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/11/26 22:08:00 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
+#include <iostream>
 
-int main()
+class Animal
 {
-    ClapTrap obj("ahmed");
-    ClapTrap obj1(obj);
-    obj.attack("billa");
-    obj.takeDamage(5);
-    obj.beRepaired(5);
-}
+    protected:
+        std::string type;
+    public:
+        Animal();
+        Animal(const Animal &other);
+        Animal &operator=(const Animal &other);
+        virtual void makeSound() const;
+        std::string getType() const;
+        virtual ~Animal();
+};
+
+#endif

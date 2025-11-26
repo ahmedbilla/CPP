@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 17:18:14 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/23 15:05:35 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/11/26 16:52:23 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/11/26 18:50:12 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef CAT_HPP
+#define CAT_HPP
 
+#include "Animal.hpp"
 
-int main()
+class Cat : public Animal
 {
-    ClapTrap obj("ahmed");
-    ClapTrap obj1(obj);
-    obj.attack("billa");
-    obj.takeDamage(5);
-    obj.beRepaired(5);
-}
+    public:
+        Cat();
+        Cat (const Cat &other);
+        Cat &operator=(const Cat &other);
+        void makeSound()  const;
+        std::string getType() const;
+        ~Cat();
+};
+
+#endif
