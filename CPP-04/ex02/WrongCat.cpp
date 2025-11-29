@@ -1,52 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 18:50:50 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/29 20:02:01 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/11/26 22:14:44 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/11/29 15:41:47 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog() : Animal("Dog")
+WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
-    brain = new Brain();
     std::cout << "Constructor " << type << " called" << std::endl;
 }
 
-Dog::Dog(const Dog &other) : Animal(other)
+WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
 {
-    brain = new Brain();
     std::cout << "Copy Constructor " << type << " called" << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &other)
+WrongCat &WrongCat::operator=(const WrongCat &other)
 {
-    if(this != &other)
-    {
-        Animal::operator=(other);
-        brain = new Brain(*other.brain); 
-    }
+    if (this != &other)
+        WrongAnimal::operator=(other);
     std::cout << type << " copy assignment operator called" << std::endl;
     return *this;
 }
 
-void Dog::makeSound() const
+void WrongCat::makeSound() const
 {
-    std::cout << "Some Dog sound" << std::endl;
+    std::cout << "Some WrongCat sound" << std::endl;
 }
 
-std::string Dog::getType() const
+std::string WrongCat::getType() const
 {
     return type;
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-    delete brain;
     std::cout << type << " destructor is called" << std::endl;
 }

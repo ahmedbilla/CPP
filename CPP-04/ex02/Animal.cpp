@@ -1,52 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 18:50:50 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/29 20:02:01 by ahbilla          ###   ########.fr       */
+/*   Created: 2025/11/26 16:11:26 by ahbilla           #+#    #+#             */
+/*   Updated: 2025/11/29 15:26:05 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Animal.hpp"
 
-Dog::Dog() : Animal("Dog")
+Animal::Animal() : type("Animal")
 {
-    brain = new Brain();
     std::cout << "Constructor " << type << " called" << std::endl;
 }
 
-Dog::Dog(const Dog &other) : Animal(other)
+Animal::Animal(const Animal &other)
 {
-    brain = new Brain();
+    *this = other;
     std::cout << "Copy Constructor " << type << " called" << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &other)
+Animal::Animal(std::string val) : type(val)
 {
-    if(this != &other)
-    {
-        Animal::operator=(other);
-        brain = new Brain(*other.brain); 
-    }
+    
+}
+
+Animal &Animal::operator=(const Animal &other)
+{
+    if (this != &other)
+        this->type = other.type;
     std::cout << type << " copy assignment operator called" << std::endl;
     return *this;
 }
 
-void Dog::makeSound() const
+void Animal::makeSound() const
 {
-    std::cout << "Some Dog sound" << std::endl;
+    std::cout << "Some animal sound" << std::endl;
 }
 
-std::string Dog::getType() const
+std::string Animal::getType() const
 {
     return type;
 }
 
-Dog::~Dog()
+Animal::~Animal()
 {
-    delete brain;
     std::cout << type << " destructor is called" << std::endl;
 }
