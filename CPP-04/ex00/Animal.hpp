@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 16:11:22 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/26 22:08:00 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/29 15:07:02 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Animal
     public:
         Animal();
         Animal(const Animal &other);
+        Animal(std::string val);
         Animal &operator=(const Animal &other);
         virtual void makeSound() const;
         std::string getType() const;

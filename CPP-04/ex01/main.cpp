@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 23:22:01 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/26 22:53:28 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/29 18:07:17 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,34 +18,25 @@
 #include "WrongCat.hpp"
 int main()
 {
-    const Animal *meta = new Animal();
-    const Animal *j = new Dog();
-    const Animal *i = new Cat();
+const Animal* j = new Dog();
+const Animal* i = new Cat();
+delete j;
+delete i;
 
-    const WrongAnimal *cc = new WrongCat();
+Animal arr[10];
 
-    
-    // Animal a;
-    // Animal a1(a);
-    // Cat b;
-    // Cat b1(b);
-    // Dog c;
-    // Dog c1(c);
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
+int k = 0;
 
-    // std::cout << "\n-------------------------------\n";
-    
-    std::cout << cc->getType() << " " << std::endl; 
-    cc->makeSound();
-    
-    delete meta;
-    delete i;
-    delete j;
-    delete cc;
+while (k < 10)
+{
+    if(k % 2 == 0)
+    {
+        arr[k] = Cat();
+    }
+    else
+        arr[k] = Dog();
+    k++;
+}
 
-    return 0;
+return 0;
 }

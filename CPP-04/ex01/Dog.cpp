@@ -6,26 +6,31 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 18:50:50 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/26 18:52:24 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/29 17:09:38 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : Animal("Dog")
 {
-    type = "Dog";
+    brain = new Brain();
     std::cout << "Constructor " << type << " called" << std::endl;
 }
 
 Dog::Dog(const Dog &other) : Animal(other)
 {
+    brain = new Brain();
     std::cout << "Copy Constructor " << type << " called" << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &other)
 {
-    Animal::operator=(other);
+    if(this != &other)
+    {
+        Animal::operator=(other);
+        brain = new Brain(*other.brain); 
+    }
     std::cout << type << " copy assignment operator called" << std::endl;
     return *this;
 }
@@ -42,5 +47,6 @@ std::string Dog::getType() const
 
 Dog::~Dog()
 {
+    delete brain;
     std::cout << type << " destructor is called" << std::endl;
 }

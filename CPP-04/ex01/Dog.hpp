@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 16:53:55 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/26 23:21:32 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/29 17:08:37 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Dog : public Animal
 {
     private:
-        Brain *value;
+        Brain *brain;       
     public:
         Dog();
         Dog (const Dog &other);

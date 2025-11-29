@@ -6,15 +6,14 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 18:50:50 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/27 00:01:46 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/29 15:30:50 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : Animal("Dog")
 {
-    type = "Dog";
     std::cout << "Constructor " << type << " called" << std::endl;
 }
 
@@ -25,7 +24,8 @@ Dog::Dog(const Dog &other) : Animal(other)
 
 Dog &Dog::operator=(const Dog &other)
 {
-    Animal::operator=(other);
+    if(this != &other)
+        Animal::operator=(other);
     std::cout << type << " copy assignment operator called" << std::endl;
     return *this;
 }

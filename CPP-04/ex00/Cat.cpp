@@ -6,15 +6,14 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 18:27:34 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/26 18:52:31 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/29 15:29:20 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat()
+Cat::Cat() : Animal("Cat")
 {
-    type = "Cat";
     std::cout << "Constructor " << type << " called" << std::endl;
 }
 
@@ -25,7 +24,8 @@ Cat::Cat(const Cat &other) : Animal(other)
 
 Cat &Cat::operator=(const Cat &other)
 {
-    Animal::operator=(other);
+    if (this != &other)
+        Animal::operator=(other);
     std::cout << type << " copy assignment operator called" << std::endl;
     return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 22:07:51 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/26 22:09:36 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/29 15:38:57 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class WrongAnimal
     public:
         WrongAnimal();
         WrongAnimal(const WrongAnimal &other);
+        WrongAnimal(std::string other);
         WrongAnimal &operator=(const WrongAnimal &other);
         void makeSound() const;
         std::string getType() const;
