@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 16:00:04 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/29 16:15:48 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/30 11:02:30 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,27 @@ Brain &Brain::operator=(const Brain &other)
     if (this != &other)
     {
         int i = 0;
-        while (i <  100)
+        while (i < 100)
         {
             this->ideas[i] = other.ideas[i];
             i++;
-        } 
+        }
     }
     std::cout << "copy assignment Brain operator called" << std::endl;
     return *this;
+}
+
+void Brain::setideas(int indx, std::string value)
+{
+    if (indx >= 0 && indx < 100)
+    {
+        ideas[indx] = value;
+    }
+}
+
+void Brain::geter(int i)
+{
+    std::cout << ideas[i] << std::endl;
 }
 
 Brain::~Brain()

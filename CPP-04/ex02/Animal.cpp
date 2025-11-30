@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 16:11:26 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/29 15:26:05 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/30 10:57:56 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,6 @@ Animal &Animal::operator=(const Animal &other)
     return *this;
 }
 
-void Animal::makeSound() const
-{
-    std::cout << "Some animal sound" << std::endl;
-}
 
 std::string Animal::getType() const
 {

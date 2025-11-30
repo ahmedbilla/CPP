@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 16:11:22 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/29 21:00:03 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/30 10:57:41 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Animal
         Animal(const Animal &other);
         Animal(std::string val);
         Animal &operator=(const Animal &other);
-        virtual void makeSound() const;
+        virtual void makeSound() const = 0;
         std::string getType() const;
         virtual ~Animal();
 };

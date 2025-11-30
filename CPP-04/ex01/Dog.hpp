@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 16:53:55 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/29 20:54:38 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/30 11:03:32 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ class Dog : public Animal
         Dog (const Dog &other);
         Dog &operator=(const Dog &other);
         void makeSound() const;
-        Brain *get_brain()
-        {
-            return brain;
-        }
+        Brain *get_brain();
         std::string getType() const;
         ~Dog();
 };

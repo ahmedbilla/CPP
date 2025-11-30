@@ -6,14 +6,14 @@
 #    By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/26 16:59:06 by ahbilla           #+#    #+#              #
-#    Updated: 2025/11/29 17:30:42 by ahbilla          ###   ########.fr        #
+#    Updated: 2025/11/30 11:04:26 by ahbilla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = Animal.cpp  Cat.cpp  Dog.cpp  main.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 OBJS = ${SRCS:.cpp=.o}
-NAME = Brain
+NAME = Abstract
 CPP = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98

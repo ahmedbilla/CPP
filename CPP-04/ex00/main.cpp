@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 23:22:01 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/11/29 15:51:07 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/11/30 11:34:40 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,17 @@ int main()
     const WrongAnimal *cc = new WrongCat();
 
     
-    // Animal a;
-    // Animal a1(a);
-    // Cat b;
-    // Cat b1(b);
-    // Dog c;
-    // Dog c1(c);
+    Animal a;
+    Animal a1(a);
+    Cat b;
+    Cat b1(b);
+    Dog c;
+    Dog c1(c);
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     i->makeSound();
     j->makeSound();
     meta->makeSound();
-
-    // std::cout << "\n-------------------------------\n";
     
     std::cout << cc->getType() << " " << std::endl; 
     cc->makeSound();
