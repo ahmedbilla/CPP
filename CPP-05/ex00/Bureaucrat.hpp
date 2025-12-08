@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 16:58:57 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/12/05 13:10:13 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/12/08 14:57:58 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ private:
     int grade;
 
 public:
+    Bureaucrat();
     Bureaucrat(std::string _name, int _grade);
     Bureaucrat(const Bureaucrat &other);
     Bureaucrat &operator=(const Bureaucrat &other);
     std::string getName() const;
     int getGrade() const;
-    ~Bureaucrat();
     class GradeTooHighException : public std::exception
     {
     public:
@@ -38,6 +38,10 @@ public:
     public:
         const char *what() const throw();
     };
+    void incrementGrade();
+    void decrementGrade();
+    ~Bureaucrat();
 };
+std::ostream &operator<<(std::ostream& file, const Bureaucrat &obj);
 
 #endif
