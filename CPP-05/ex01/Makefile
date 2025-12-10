@@ -6,12 +6,12 @@
 #    By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/06 16:51:36 by ahbilla           #+#    #+#              #
-#    Updated: 2025/12/06 16:52:46 by ahbilla          ###   ########.fr        #
+#    Updated: 2025/12/10 17:11:52 by ahbilla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS = Bureaucrat.cpp main.cpp 
+SRCS = Bureaucrat.cpp main.cpp Form.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 NAME = Bureaucrat
@@ -24,7 +24,7 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	${CPP} ${CPPFLAGS} ${OBJS} -o ${NAME}
 
-%.o: %.cpp Bureaucrat.hpp
+%.o: %.cpp Bureaucrat.hpp Form.hpp
 	${CPP} ${CPPFLAGS} -c $< -o $@
 
 

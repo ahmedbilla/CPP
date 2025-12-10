@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 17:03:23 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/12/08 15:08:22 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/12/10 17:14:31 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
     if (this != &other)
         this->grade = other.grade;
     std::cout <<"copy assignment operator called" << std::endl;
+    return (*this);
 }
 
 std::string Bureaucrat::getName() const

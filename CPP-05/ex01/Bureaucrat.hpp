@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 16:58:57 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/12/08 14:57:58 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/12/10 17:21:31 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
-#include <exception>
+
+class Form;
+
 class Bureaucrat
 {
 private:
@@ -40,8 +42,9 @@ public:
     };
     void incrementGrade();
     void decrementGrade();
+    void signForm(Form &obj);
     ~Bureaucrat();
 };
-std::ostream &operator<<(std::ostream& file, const Bureaucrat &obj);
+std::ostream &operator<<(std::ostream &file, const Bureaucrat &obj);
 
 #endif
