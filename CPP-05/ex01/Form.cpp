@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 11:52:38 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/12/10 17:21:55 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/12/12 17:23:32 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ Form::Form(const std::string n, const int s, const int e) : name(n), gradeSign(s
         throw Form::GradeTooHighException();
     if(gradeSign > 150 || gradeExec > 150)
         throw Form::GradeTooLowException();
+    std::cout << "Parameterized constructor is called" << std::endl;
 }
 
 Form::Form(const Form &other) :name(other.name), gradeSign(other.gradeSign), gradeExec(other.gradeExec)
