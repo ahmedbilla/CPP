@@ -1,0 +1,13 @@
+Exception Handling in C++
+
+Exception handling in c++ is a mechanism to detect and manage runtime errors,
+in a structured way. Exemples of runtime errors are
+
+*devision by zero
+*accessing invalide memory
+*File I/O failures
+
+How Exception Handling Works in C++
+
+insted of terminating the program abruptly when an error occurs, c++ allows you to throw exceptions and catch
+them for gracful handling
