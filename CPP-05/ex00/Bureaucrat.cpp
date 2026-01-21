@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 17:03:23 by ahbilla           #+#    #+#             */
-/*   Updated: 2025/12/18 14:45:42 by ahbilla          ###   ########.fr       */
+/*   Updated: 2025/12/21 13:45:44 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int Bureaucrat::getGrade() const
     return grade;
 }
 
-const char *Bureaucrat::GradeTooHighException::what() const throw()
+const char *Bureaucrat::GradeTooHighException::what()
 {
     return("Grade to high\n");
 }
