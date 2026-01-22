@@ -6,7 +6,7 @@
 /*   By: ahbilla <ahbilla@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 19:21:55 by ahbilla           #+#    #+#             */
-/*   Updated: 2026/01/21 20:19:39 by ahbilla          ###   ########.fr       */
+/*   Updated: 2026/01/22 12:39:09 by ahbilla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,12 @@ class ScalarConverter
                 else
                     std::cout<< "char: Non displayable" <<std::endl;
             }
+            
+            // else if (z)
+            // {
+                
+            // }
+            
         }
 };
 
