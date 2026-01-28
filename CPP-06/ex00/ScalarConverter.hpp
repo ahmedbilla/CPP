@@ -25,28 +25,56 @@ private:
     // ScalarConverter &operator=(const ScalarConverter &other){}
     // ~ScalarConverter(){}
 public:
+
+    static std::string pseudo_literals(std::string literals, std::string option)
+    {
+        std::string rtr;
+        if (literals == "-inff" || literals == "-inf")
+        {
+            if (option == "float")
+                rtr = "-inff";
+            else if(option == "double")
+                rtr = "-inf";
+        }
+        else if (literals == "+inff" || literals == "+inf")
+        {
+            if (option == "float")
+                rtr = "+inff";
+            else if(option == "double")
+                rtr = "+inf";
+        }
+        else if (literals == "nanf" || literals == "nan")
+        {
+            if (option == "float")
+                rtr = "nanf";
+            else if(option == "double")
+                rtr = "nan";
+        }
+        
+        return rtr;
+    }
     static int check_ischar(const std::string &param)
     {
-        if (param.length() == 1 && !std::isdigit(param[0]))
-            return 1;
-        else if(param == "nan" || param == "-inff" || param == "+inff" || param == "nanf" || param =="-inf" || param == "+inf" || param == "inf" || param == "inff")
+        if(param == "nan" || param == "-inff" || param == "+inff" || param == "nanf" || param =="-inf" || param == "+inf" || param == "inf" || param == "inff")
         {
             std::cout << "char: impossible" << std::endl;
             return 3;
         }
+        if (param.length() == 1 && !std::isdigit(param[0]))
+            return 1;
         return 0;
     }
     static int check_isnumber(const std::string &number)
     {
         int i = 0;
         long result;
-        if (number.empty())
-            return 0;
-        else if(number == "nan" || number == "-inff" || number == "+inff" || number == "nanf" || number =="-inf" || number == "+inf" || number == "inf" || number == "inff")
+        if(number == "nan" || number == "-inff" || number == "+inff" || number == "nanf" || number =="-inf" || number == "+inf" || number == "inf" || number == "inff")
         {
             std::cout << "int: impossible" << std::endl;
             return 3;
         }
+        if (number.empty())
+            return 0;
         if (number[i] == '+' || number[i] == '-')
             i++;
 
@@ -68,9 +96,18 @@ public:
     {
         int i = 0;
         int dot_count = 0;
-
+        std::string res;
+        
+        if (number == "-inff" || number == "-inf" || number == "+inff" || number == "+inf" || number == "nanf" || number == "nan")
+        {
+            res = pseudo_literals(number, "float");
+            std::cout << "float: " << res << std::endl;
+            return 3;
+        }
         if (number.empty())
             return 0;
+        
+        
 
         if (number[i] == '+' || number[i] == '-')
             i++;
@@ -94,9 +131,21 @@ public:
     {
         int i = 0;
         int dot_count = 0;
+        std::string res;
+        int flag = 0;
 
+        if (number == "-inff" || number == "-inf" || number == "+inff" || number == "+inf" || number == "nanf" || number == "nan")
+        {
+            if (flag == 1)
+                return 3;
+            res = pseudo_literals(number, "double");
+            std::cout << "double: " << res << std::endl;
+            flag = 1;
+            return 3;
+        }
         if (number.empty())
             return 0;
+
 
         if (number[i] == '+' || number[i] == '-')
             i++;
@@ -188,6 +237,16 @@ public:
         //     std::cout << "float: nanf" << std::endl;
         //     std::cout << "double: nan" << std::endl;
         // }
+        else if(check_isdouble(param) == 3)
+            return ;
+        else
+        {
+                std::cout << "char: impossible" << std::endl;
+                std::cout << "int: impossible" << std::endl;
+                std::cout << "float: impossible" << std::endl;
+                std::cout << "double: impossible" << std::endl;
+        }
+        
     }
 };
 
