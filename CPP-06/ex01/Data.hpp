@@ -17,7 +17,7 @@
 
 struct Data
 {
-    int i; 
-    std::string s;
-}
+    std::string value;
+};
+
 #endif
